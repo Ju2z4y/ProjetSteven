@@ -1,5 +1,7 @@
 package cgi.stevenProjet;
 
+import java.util.ArrayList;
+
 import cgi.stevenProjet.bean.Moto;
 import cgi.stevenProjet.bean.Vehicule;
 import cgi.stevenProjet.bean.Voiture;
@@ -20,13 +22,25 @@ public class App
         Vehicule vehicule4 = new Voiture("1513", "V8");
         Moto moto1 = new Moto("6164", "V15");
         
-        System.out.println(vehicule.toString());
-        System.out.println(vehicule2.toString());
-        System.out.println(vehicule3.toString());
-        System.out.println(vehicule4.toString());
-        System.out.println(moto1.toString());
-        System.out.println(moto1.demarrer());
-        System.out.println(vehicule4.demarrer());
+        ArrayList<Vehicule> garage = new ArrayList<Vehicule>();
+        garage.add(vehicule);
+        garage.add(vehicule2);
+        garage.add(vehicule3);
+        garage.add(vehicule4);
+        garage.add(moto1);
+        
+        ArrayList<Moto> motos = new ArrayList<Moto>();
+        
+        for (Vehicule veh : garage) {
+        	if (veh instanceof Moto) {
+        		motos.add((Moto) veh);
+        	}
+
+		}
+        
+        for (Moto moto : motos) {
+        	System.out.println(moto.toString());
+		}
         
     }
 }
