@@ -1,11 +1,13 @@
 package cgi.stevenProjet.bean;
 
-public class Moto extends Vehicule{
-	private int nbRoues = 2;
-	private int nbPhares = 2;
-	private int nbRetro = 2;
+public class Voiture extends Vehicule{
+	private int nbRoues = 4;
+	private int nbPhares = 4;
+	private int nbRetro = 3;
+	private Boolean decapotable = null;
+
 	
-	public Moto(String immatriculation, String moteur) {
+	public Voiture(String immatriculation, String moteur) {
 		super(immatriculation, moteur);
 	}
 	
@@ -15,7 +17,8 @@ public class Moto extends Vehicule{
 		reponse += "Moteur : " + moteur  + "\n";
 		reponse += "Nombre de roues : " + nbRoues + "\n";
 		reponse += "Nombre de phares : " + nbPhares + "\n";
-		reponse += "Nombre de rétroviseurs : " + nbRetro + "\n";
+		reponse += "Nombre de Retroviseurs : " + nbRetro + "\n";
+		reponse += "Décapotable ? " + decapotable + "\n";
 		return reponse;
 	}
 
