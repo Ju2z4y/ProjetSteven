@@ -1,6 +1,8 @@
 package cgi.stevenProjet.bean;
 
-public class Vehicule {
+import cgi.stevenProjet.interfaces.ActionVehicule;
+
+public class Vehicule implements ActionVehicule{
 	
 	protected String immatriculation;
 	protected String moteur;
