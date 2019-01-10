@@ -1,5 +1,6 @@
 package cgi.stevenProjet;
 
+import cgi.stevenProjet.bean.Moto;
 import cgi.stevenProjet.bean.Vehicule;
 
 /**
@@ -14,9 +15,13 @@ public class App
         
         Vehicule vehicule = new Vehicule("5685", "V12");
         Vehicule vehicule2 = new Vehicule("8569", "V3");
+        Vehicule vehicule3 = new Moto("1513", "V4");
+        Moto moto1 = new Moto("6164", "V15");
         
         System.out.println(vehicule.toString());
         System.out.println(vehicule2.toString());
+        System.out.println(vehicule3.toString());
+        System.out.println(moto1.toString());
         
     }
 }

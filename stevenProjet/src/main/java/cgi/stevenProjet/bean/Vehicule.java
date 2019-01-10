@@ -2,8 +2,8 @@ package cgi.stevenProjet.bean;
 
 public class Vehicule {
 	
-	private String immatriculation;
-	private String moteur;
+	protected String immatriculation;
+	protected String moteur;
 
 	
 	public Vehicule(String immatriculation, String moteur) {
