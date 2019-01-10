@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Garage {
 	
 	private ArrayList<Vehicule> mesVeh;
-	public ArrayList<Moto> motos;
-	private ArrayList<Voiture> voitures;
+	private ArrayList<Moto> motos = new ArrayList<Moto>();
+	private ArrayList<Voiture> voitures = new ArrayList<Voiture>();
 	
 	public Garage (ArrayList<Vehicule> garage) {
 		this.mesVeh = garage;
@@ -17,7 +17,7 @@ public class Garage {
         	if (veh instanceof Voiture) {
         		voitures.add((Voiture) veh);
         	} else if (veh instanceof Moto) {
-        		ajouterMoto((Moto)veh);
+        		motos.add((Moto) veh);
         	}
 
 		}
@@ -47,9 +47,6 @@ public class Garage {
 		this.voitures = voitures;
 	}
 	
-	public void ajouterMoto(Moto moto) {
-		motos.add(moto);
-	}
 	
 	
 
