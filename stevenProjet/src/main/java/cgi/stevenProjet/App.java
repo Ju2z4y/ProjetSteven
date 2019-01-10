@@ -1,6 +1,8 @@
 package cgi.stevenProjet;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import cgi.stevenProjet.bean.Garage;
 import cgi.stevenProjet.bean.Moto;
@@ -12,6 +14,7 @@ import cgi.stevenProjet.enums.VoitureEnum;
  * Hello world!
  *t
  */
+
 public class App 
 {
     public static void main( String[] args )
@@ -38,9 +41,19 @@ public class App
         
         garage.trier();
         
-        for (Vehicule veh : garage.getMotos()) {
+        garage.rassembler();
+        
+        Map<String, ArrayList<Vehicule>> map = garage.getMap();
+        
+        List<Vehicule> list = map.get("ListeMotos");
+        
+        for (Vehicule veh : list) {
 			System.out.println(veh);
 		}
+        
+//        for (Vehicule veh : garage.getMotos()) {
+//			System.out.println(veh);
+//		}
         
         
         
