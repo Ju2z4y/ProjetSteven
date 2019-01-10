@@ -39,6 +39,18 @@ public class Vehicule implements ActionVehicule{
 	public void setMoteur(String moteur) {
 		this.moteur = moteur;
 	}
+
+
+	public String demarrer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public String rouler() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	

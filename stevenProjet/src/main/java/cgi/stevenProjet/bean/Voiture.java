@@ -39,7 +39,17 @@ public class Voiture extends Vehicule{
 		this.nbRoues = nbRoues;
 	}
 	
+	@Override
+	public String demarrer() {
+		String rep = "La voiture démarre";
+		return rep;
+	}
 
+	@Override
+	public String rouler() {
+		String rep = "La voiture roule";
+		return rep;
+	}
 	
 
 }

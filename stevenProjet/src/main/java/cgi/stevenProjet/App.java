@@ -6,7 +6,7 @@ import cgi.stevenProjet.bean.Voiture;
 
 /**
  * Hello world!
- *
+ *t
  */
 public class App 
 {
@@ -25,6 +25,8 @@ public class App
         System.out.println(vehicule3.toString());
         System.out.println(vehicule4.toString());
         System.out.println(moto1.toString());
+        System.out.println(moto1.demarrer());
+        System.out.println(vehicule4.demarrer());
         
     }
 }
