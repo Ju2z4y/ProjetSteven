@@ -2,9 +2,11 @@ package cgi.stevenProjet;
 
 import java.util.ArrayList;
 
+import cgi.stevenProjet.bean.Garage;
 import cgi.stevenProjet.bean.Moto;
 import cgi.stevenProjet.bean.Vehicule;
 import cgi.stevenProjet.bean.Voiture;
+import cgi.stevenProjet.enums.VoitureEnum;
 
 /**
  * Hello world!
@@ -14,33 +16,33 @@ public class App
 {
     public static void main( String[] args )
     {
+    	
         System.out.println( "App lauched\n------------------------\n" );
         
         Vehicule vehicule = new Vehicule("5685", "V12");
         Vehicule vehicule2 = new Vehicule("8569", "V3");
         Vehicule vehicule3 = new Moto("1513", "V4");
-        Vehicule vehicule4 = new Voiture("1513", "V8");
+        Vehicule vehicule4 = new Voiture("1513", "V8", VoitureEnum.PEUGEOT);
         Moto moto1 = new Moto("6164", "V15");
+        Vehicule voiture = new Voiture("65264", "VHJDJ", VoitureEnum.RENAULT);
         
-        ArrayList<Vehicule> garage = new ArrayList<Vehicule>();
-        garage.add(vehicule);
-        garage.add(vehicule2);
-        garage.add(vehicule3);
-        garage.add(vehicule4);
-        garage.add(moto1);
+        ArrayList<Vehicule> listVeh = new ArrayList<Vehicule>();
+        listVeh.add(vehicule);
+        listVeh.add(vehicule2);
+        listVeh.add(vehicule3);
+        listVeh.add(vehicule4);
+        listVeh.add(moto1);
+        listVeh.add(voiture);
         
-        ArrayList<Moto> motos = new ArrayList<Moto>();
+        Garage garage = new Garage(listVeh);
         
-        for (Vehicule veh : garage) {
-        	if (veh instanceof Moto) {
-        		motos.add((Moto) veh);
-        	}
-
+        garage.trier();
+        
+        for (Vehicule veh : garage.getMotos()) {
+			System.out.println(veh);
 		}
         
-        for (Moto moto : motos) {
-        	System.out.println(moto.toString());
-		}
+        
         
     }
 }
